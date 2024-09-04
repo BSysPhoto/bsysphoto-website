@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSysPhoto - World-Class Software for Photography Professionals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home">
+                    <svg width="200" height="50" viewBox="0 0 200 50">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#4286f4;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#373B44;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="200" height="50" fill="white"/>
+                        <path d="M10,25 Q50,5 100,25 T190,25" stroke="url(#logo-gradient)" stroke-width="2" fill="none"/>
+                        <text x="20" y="33" font-family="Arial Black, sans-serif" font-size="24" fill="#373B44" style="font-weight:bold;">
+                            BSysPhoto
+                        </text>
+                        <rect x="185" y="5" width="10" height="10" fill="#4286f4"/>
+                        <rect x="185" y="20" width="10" height="10" fill="#373B44"/>
+                        <rect x="185" y="35" width="10" height="10" fill="#e74c3c"/>
+                    </svg>
+                </a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <nav id="menu">
+                        <div class="dropdown">
+                        <a href="browser-pro.html" class="dropbtn">Browser Pro</a>
+                        <div class="dropdown-content">
+                            <a href="#download-browser-pro">Purchase</a>
+                            <a href="#download-browser-pro">Downloads</a>
+                            <a href="#download-downloader-pro">Online Manual</a>
+                            <a href="#download-downloader-pro">Release History</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="downloader-pro.html" class="dropbtn">Downloader Pro</a>
+                        <div class="dropdown-content">
+                            <a href="#download-browser-pro">Purchase</a>
+                            <a href="#download-browser-pro">Downloads</a>
+                            <a href="#download-downloader-pro">Online Manual</a>
+                            <a href="#download-downloader-pro">Release History</a>
+                        </div>
+                    </div>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <svg class="hero-background" viewBox="0 0 1200 300" preserveAspectRatio="none">
+                <path d="M0,0 C300,100 900,50 1200,100 L1200,300 L0,300 Z" fill="white" opacity="0.1"/>
+                <path d="M0,100 C300,200 900,150 1200,200 L1200,300 L0,300 Z" fill="white" opacity="0.1"/>
+            </svg>
+            <div class="container hero-content">
+                <h1>BSysPhoto: Empowering Photographers</h1>
+                <p class="former-name">(Formerly Breeze Systems photography products)</p>
+                <p>World-Class Software for Photography Professionals</p>
+                <p>BSysPhoto delivers cutting-edge tools designed to streamline your photography workflow. Our software isn't just flexible; it's fully adaptable to your unique needs and brand.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Our Photography Solutions</h2>
+            <div class="products">
+                <div class="product">
+                    <h3>Browser Pro</h3>
+                    <p>Organize, cull, and enhance your images with ease. Take control of your photo library like never before.</p>
+                    <a href="browser-pro.html" class="cta-button">Learn More</a>
+                </div>
+                <div class="product">
+                    <h3>Downloader Pro</h3>
+                    <p>Streamline the process of downloading and organizing your photos and videos. Save time on every shoot.</p>
+                    <a href="#downloader-pro" class="cta-button">Learn More</a>
+                </div>
+            </div>
+
+            <h2>Why Choose BSysPhoto?</h2>
+            <ul>
+                <li><strong>Versatility:</strong> Suitable for businesses, independent photographers, and hobbyists alike.</li>
+                <li><strong>Customization:</strong> Tailor the software to fit your specific workflow.</li>
+                <li><strong>Efficiency:</strong> Save time and boost productivity with our intuitive tools.</li>
+            </ul>
+
+            <h2>Elevate Your Photography Experience</h2>
+            <p>BSysPhoto's suite of products is designed to help you focus on what matters most - capturing and creating stunning images. Let our software handle the technical details while you unleash your creativity.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; We Fly Kites Inc 407 E Ayre St #1219 Wilmington DE 19804 USA | <a href="#privacy">Privacy Policy</a> | <a href="#eula">End User License Agreement</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!menu.contains(event.target) && !hamburger.contains(event.target) && menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
